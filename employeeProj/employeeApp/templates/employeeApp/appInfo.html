@@ -1,0 +1,16 @@
+
+<!--page exteded form index and info is printed on the page-->
+
+{% extends 'employeeApp/index.html' %}
+
+{%block content %}
+
+    {{ name }}
+    <br>
+    {{ dateOfBirth }}
+    <br>
+    {{position}}
+    <br>
+    {{salary}}
+
+{% endblock %}}

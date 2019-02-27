@@ -1,0 +1,20 @@
+
+<!--index html with form sending to the info page-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>Employee Application</h1>
+{% block content %}
+<form action="{% url 'appInfo' %}" method="post">
+    {% csrf_token %}
+    {{ appForm.as_p }}
+    <button>Submit</button>
+</form>
+{% endblock %}
+</body>
+</html>
